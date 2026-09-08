@@ -1,516 +1,100 @@
-:root {
-  --cream: #f7f3ed;
-  --paper: #fffdf9;
-  --ink: #22302c;
-  --muted: #66716d;
-  --gold: #b58a5b;
-  --sage: #6f7f74;
-  --line: rgba(34,48,44,.12);
-  --shadow: 0 18px 50px rgba(37,45,41,.10);
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --ivory:#f7f1e7; --paper:#fffaf1; --ink:#3f392f; --muted:#746b5e;
+  --gold:#9b7950; --line:rgba(92,72,48,.18);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--ivory);color:var(--ink)}
+body{font-family:Montserrat,Arial,sans-serif}
+a{color:inherit}
+.container{width:min(1080px,calc(100% - 32px));margin:auto}
+
+/* OPENING EXPERIENCE */
+.opening{
+  min-height:100svh; position:relative; overflow:hidden; background:#d9ccb9;
+}
+.art{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  object-position:center; transition:transform 1.2s ease,filter 1.2s ease,opacity .8s ease;
+}
+.open-control{
+  position:absolute; z-index:3; left:50%; top:69%;
+  transform:translate(-50%,-50%);
+  width:min(360px,52vw); height:84px;
+  border:1px solid rgba(72,58,42,.42); background:rgba(247,241,231,.08);
+  color:transparent; cursor:pointer;
+}
+.open-control:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.opening.open .art{transform:scale(1.045);filter:blur(7px) brightness(.72);opacity:.42}
+.opening.open .open-control{display:none}
+
+.reveal{
+  position:absolute; z-index:4; inset:0; display:grid; place-items:center;
+  padding:22px; opacity:0; pointer-events:none; transform:translateY(28px) scale(.985);
+  transition:opacity .8s ease .3s,transform 1s cubic-bezier(.2,.8,.2,1) .2s;
+}
+.opening.open .reveal{opacity:1;pointer-events:auto;transform:none}
+.invitation-card{
+  width:min(680px,94vw); max-height:92svh; overflow:auto;
+  background:rgba(255,250,241,.97); padding:clamp(34px,6vw,70px);
+  text-align:center; box-shadow:0 30px 90px rgba(37,29,19,.25);
+  border:1px solid rgba(155,121,80,.32);
+}
+.kicker{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.invitation-card h1{
+  font-family:"Cormorant Garamond",serif;font-weight:500;
+  font-size:clamp(2.6rem,7vw,5rem);line-height:.9;margin:22px 0 20px;
+}
+.invitation-card h1 span{display:block;font-size:.58em;line-height:1.15;margin-top:12px}
+.rule{width:54px;height:1px;background:var(--gold);margin:24px auto}
+.location{font-family:"Cormorant Garamond",serif;font-size:1.55rem}
+.date{margin-top:8px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase}
+.copy{max-width:460px;margin:24px auto;color:var(--muted);line-height:1.65;font-size:.92rem}
+.enter{
+  display:inline-flex;align-items:center;justify-content:center;min-height:52px;
+  padding:0 28px;border:1px solid var(--gold);text-decoration:none;
+  font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;
 }
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--cream);
-  color: var(--ink);
+/* GUIDE PAGES */
+.site-header{border-bottom:1px solid var(--line);background:rgba(247,241,231,.96)}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:1.3rem;text-decoration:none}
+.nav-links{display:flex;gap:16px;flex-wrap:wrap}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.82rem}
+.eyebrow{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.guide-hero,.page-hero{padding:64px 0 30px}
+.guide-hero h1,.page-hero h1,.card h2,.info-box h2{
+  font-family:"Cormorant Garamond",serif;font-weight:500
 }
+.guide-hero h1,.page-hero h1{font-size:clamp(2.8rem,7vw,5rem);line-height:.95;margin:14px 0}
+.lead{max-width:720px;color:var(--muted);line-height:1.7}
+.quick-note,.info-box,.card{background:var(--paper);border:1px solid var(--line)}
+.quick-note{margin-top:24px;padding:18px}
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:24px 0 70px}
+.card{display:block;padding:26px;text-decoration:none;min-height:205px}
+.card .number{font-size:.72rem;letter-spacing:.1em;color:var(--gold)}
+.card h2{font-size:2rem;margin:18px 0 8px}
+.card p,.info-box p,.info-box li{color:var(--muted);line-height:1.65}
+.action{display:inline-block;margin-top:18px;font-size:.78rem;font-weight:600}
+.content{display:grid;gap:16px;padding-bottom:70px}
+.info-box{max-width:850px;padding:24px}
+.info-box h2{font-size:1.8rem;margin-top:0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.8rem}
 
-a { color: inherit; }
-
-.container {
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
+@media(max-width:760px){
+  .open-control{top:69%;width:62vw;height:66px}
+  .invitation-card{padding:38px 24px}
+  .invitation-card h1{font-size:3rem}
+  .nav{align-items:flex-start;flex-direction:column;padding:14px 0}
+  .card-grid{grid-template-columns:1fr}
 }
-
-/* Invitation */
-.invitation {
-  min-height: 100svh;
-  position: relative;
-  display: grid;
-  place-items: center;
-  padding: 30px 0;
-  background:
-    linear-gradient(rgba(17,28,25,.40), rgba(17,28,25,.48)),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85")
-    center/cover no-repeat;
+@media(max-width:520px){
+  .art{object-position:center}
+  .open-control{top:69%;width:68vw;height:58px}
 }
-
-.invitation-card {
-  width: min(760px, calc(100% - 28px));
-  background: rgba(255,253,249,.94);
-  border: 1px solid rgba(255,255,255,.75);
-  border-radius: 28px;
-  padding: clamp(34px, 7vw, 72px);
-  text-align: center;
-  box-shadow: 0 30px 90px rgba(0,0,0,.22);
-}
-
-.eyebrow {
-  font-size: .78rem;
-  font-weight: 800;
-  letter-spacing: .24em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-h1, h2, h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
-}
-
-.invitation h1 {
-  margin: 18px 0 18px;
-  font-size: clamp(2.7rem, 8vw, 5.3rem);
-  line-height: .98;
-}
-
-.invitation .place {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.3rem, 4vw, 1.8rem);
-  margin-top: 22px;
-}
-
-.invitation .date {
-  margin-top: 8px;
-  color: var(--muted);
-  font-weight: 650;
-}
-
-.invitation .message {
-  max-width: 540px;
-  margin: 24px auto 0;
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-.primary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 28px;
-  margin-top: 30px;
-  border-radius: 999px;
-  background: var(--ink);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-/* Simple site header */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(247,243,237,.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav {
-  min-height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.brand {
-  font-family: Georgia, "Times New Roman", serif;
-  text-decoration: none;
-  font-size: 1.05rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--muted);
-  font-size: .92rem;
-}
-
-/* Guide */
-.guide-hero {
-  padding: 72px 0 28px;
-}
-
-.guide-hero h1 {
-  margin: 12px 0 16px;
-  font-size: clamp(2.6rem, 7vw, 4.8rem);
-  line-height: 1;
-}
-
-.lead {
-  max-width: 720px;
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 1.08rem;
-}
-
-.quick-note {
-  margin: 26px 0 8px;
-  padding: 18px 20px;
-  border-radius: 16px;
-  background: #efe6da;
-  border: 1px solid rgba(181,138,91,.25);
-}
-
-.quick-note strong {
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* Large, obvious cards for non-technical users */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding: 24px 0 72px;
-}
-
-.card {
-  display: block;
-  min-height: 220px;
-  padding: 26px;
-  border-radius: 24px;
-  background: var(--paper);
-  border: 1px solid rgba(255,255,255,.8);
-  box-shadow: var(--shadow);
-  text-decoration: none;
-}
-
-.card .number {
-  display: inline-grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #efe6da;
-  color: var(--gold);
-  font-weight: 800;
-  font-size: .9rem;
-}
-
-.card h2 {
-  margin: 22px 0 10px;
-  font-size: 1.9rem;
-}
-
-.card p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.card .action {
-  display: inline-block;
-  margin-top: 22px;
-  font-weight: 800;
-}
-
-/* Content pages */
-.page-hero {
-  padding: 66px 0 32px;
-}
-
-.page-hero h1 {
-  margin: 12px 0 14px;
-  font-size: clamp(2.5rem, 6vw, 4.3rem);
-  line-height: 1;
-}
-
-.content {
-  display: grid;
-  gap: 18px;
-  padding-bottom: 70px;
-}
-
-.info-box {
-  max-width: 850px;
-  padding: 24px;
-  background: var(--paper);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-}
-
-.info-box h2 {
-  margin-top: 0;
-  font-size: 1.65rem;
-}
-
-.info-box p,
-.info-box li {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-.info-box ul {
-  padding-left: 20px;
-  margin-bottom: 0;
-}
-
-.note {
-  border-left: 4px solid var(--gold);
-}
-
-footer {
-  border-top: 1px solid var(--line);
-  padding: 28px 0 42px;
-  color: var(--muted);
-  font-size: .9rem;
-}
-
-/* Mobile: fewer choices visible at once, large tap targets */
-@media (max-width: 760px) {
-  .nav {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 14px 0;
-  }
-
-  .nav-links {
-    gap: 10px 14px;
-  }
-
-  .invitation-card {
-    border-radius: 22px;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 0;
-  }
-}
-
-
-/* Opening invitation experience */
-.invite-stage {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  padding: 24px;
-  background:
-    linear-gradient(rgba(19,31,29,.28), rgba(19,31,29,.42)),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85")
-    center/cover no-repeat;
-}
-
-.envelope-scene {
-  width: min(620px, 94vw);
-  text-align: center;
-  perspective: 1400px;
-}
-
-.envelope {
-  position: relative;
-  height: min(390px, 62vw);
-  max-height: 390px;
-  min-height: 270px;
-  filter: drop-shadow(0 28px 35px rgba(0,0,0,.28));
-}
-
-.envelope-back {
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  background: #e8dccb;
-}
-
-.letter {
-  position: absolute;
-  z-index: 2;
-  left: 7%;
-  right: 7%;
-  bottom: 5%;
-  height: 84%;
-  padding: clamp(22px, 5vw, 42px) 24px;
-  background: #fffdf9;
-  border: 1px solid rgba(181,138,91,.25);
-  box-shadow: 0 10px 30px rgba(0,0,0,.12);
-  transition: transform 1.05s cubic-bezier(.22,.8,.25,1), height .8s ease;
-  overflow: hidden;
-}
-
-.letter h1 {
-  margin: 12px 0 13px;
-  font-size: clamp(2rem, 6vw, 3.6rem);
-  line-height: 1;
-}
-
-.letter .place {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.05rem, 3vw, 1.35rem);
-  margin-top: 16px;
-}
-
-.letter .date {
-  color: var(--muted);
-  margin-top: 7px;
-  font-weight: 650;
-}
-
-.letter .message {
-  color: var(--muted);
-  line-height: 1.55;
-  max-width: 430px;
-  margin: 15px auto 0;
-}
-
-.letter .primary-button {
-  margin-top: 18px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity .45s ease .75s, transform .45s ease .75s;
-}
-
-.envelope-front {
-  position: absolute;
-  z-index: 3;
-  inset: 0;
-  pointer-events: none;
-}
-
-.envelope-front::before,
-.envelope-front::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 52%;
-  height: 72%;
-  background: #efe4d4;
-}
-
-.envelope-front::before {
-  left: 0;
-  clip-path: polygon(0 0, 100% 55%, 100% 100%, 0 100%);
-}
-
-.envelope-front::after {
-  right: 0;
-  clip-path: polygon(100% 0, 0 55%, 0 100%, 100% 100%);
-}
-
-.envelope-pocket {
-  position: absolute;
-  z-index: 4;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 58%;
-  background: #e4d5c1;
-  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
-  pointer-events: none;
-}
-
-.flap {
-  position: absolute;
-  z-index: 5;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 56%;
-  transform-origin: top;
-  transform: rotateX(0deg);
-  background: #f2e7d7;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transition: transform .75s ease;
-}
-
-.seal {
-  position: absolute;
-  z-index: 6;
-  left: 50%;
-  top: 47%;
-  transform: translate(-50%, -50%);
-  width: 62px;
-  height: 62px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #9b744e;
-  color: #fff8ee;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
-  border: 2px solid rgba(255,255,255,.35);
-  box-shadow: 0 5px 12px rgba(0,0,0,.16);
-  transition: opacity .3s ease, transform .3s ease;
-}
-
-.open-button {
-  margin-top: 28px;
-  min-height: 52px;
-  padding: 0 28px;
-  border: 0;
-  border-radius: 999px;
-  background: #fffdf9;
-  color: var(--ink);
-  font: inherit;
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
-}
-
-.invite-stage.opened .flap {
-  transform: rotateX(180deg);
-  z-index: 1;
-}
-
-.invite-stage.opened .seal {
-  opacity: 0;
-  transform: translate(-50%, -65%) scale(.75);
-}
-
-.invite-stage.opened .letter {
-  transform: translateY(-34%);
-  z-index: 7;
-}
-
-.invite-stage.opened .letter .primary-button {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.invite-stage.opened .open-button {
-  visibility: hidden;
-}
-
-@media (max-width: 600px) {
-  .invite-stage {
-    padding: 16px;
-  }
-
-  .envelope {
-    height: 330px;
-  }
-
-  .letter .message {
-    font-size: .9rem;
-  }
-
-  .invite-stage.opened .letter {
-    transform: translateY(-24%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .flap, .letter, .seal, .letter .primary-button {
-    transition: none;
-  }
+@media(prefers-reduced-motion:reduce){
+  .art,.reveal{transition:none}
 }

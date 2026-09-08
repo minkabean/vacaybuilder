@@ -1,11 +1,12 @@
-# Phase 0.6 — Opening Invitation
+# Trina's Celebration — Luxury Invitation Prototype
 
-Replace the files in the existing repository with these files and push.
+This version implements the approved luxury invitation visual direction.
 
-The landing page now behaves like an invitation:
-1. Guest sees a closed envelope.
-2. Guest taps "Open Invitation".
-3. The flap opens and the invitation rises out.
-4. Guest taps "View Trip Details".
+Opening flow:
+1. Luxury invitation scene
+2. Tap OPEN INVITATION
+3. Invitation details are revealed
+4. Tap VIEW TRIP DETAILS
+5. Enter the simple guest guide
 
-No framework, database, login, or build step is required.
+The trip guide remains intentionally simple while the opening experience is refined.

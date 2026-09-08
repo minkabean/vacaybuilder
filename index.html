@@ -1,44 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>You're Invited | Trina's 60th Birthday & Retirement Celebration</title>
-  <meta name="description" content="Trina's 60th Birthday & Retirement Celebration in Martha's Vineyard, August 5–18, 2029">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>You're Invited | Trina's Celebration</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="invite-stage" id="inviteStage">
-    <section class="envelope-scene" aria-label="Trina's celebration invitation">
-      <div class="envelope">
-        <div class="envelope-back"></div>
+<main class="opening" id="opening">
+  <img class="art" src="invitation-art.png" alt="Elegant ivory invitation envelope for Trina's Martha's Vineyard celebration">
+  <button class="open-control" id="openBtn" aria-label="Open Trina's invitation">Open Invitation</button>
 
-        <article class="letter">
-          <div class="eyebrow">You're Invited</div>
-          <h1>Trina's 60th Birthday<br>& Retirement Celebration</h1>
-          <div class="place">Martha's Vineyard · Oak Bluffs</div>
-          <div class="date">August 5–18, 2029</div>
-          <p class="message">Come celebrate a milestone birthday, retirement, and time together on Martha's Vineyard.</p>
-          <a class="primary-button" href="guide.html">View Trip Details</a>
-        </article>
-
-        <div class="envelope-front"></div>
-        <div class="envelope-pocket"></div>
-        <div class="flap"></div>
-        <div class="seal">T</div>
-      </div>
-
-      <button class="open-button" id="openInvitation" type="button">Open Invitation</button>
-    </section>
-  </main>
-
-  <script>
-    const stage = document.getElementById('inviteStage');
-    const button = document.getElementById('openInvitation');
-
-    button.addEventListener('click', () => {
-      stage.classList.add('opened');
-    });
-  </script>
+  <section class="reveal" aria-live="polite">
+    <article class="invitation-card">
+      <div class="kicker">You're invited</div>
+      <div class="rule"></div>
+      <h1>Trina's
+        <span>60th Birthday &amp;<br>Retirement Celebration</span>
+      </h1>
+      <div class="location">Martha's Vineyard · Oak Bluffs</div>
+      <div class="date">August 5 — 18, 2029</div>
+      <p class="copy">Come celebrate a milestone birthday, retirement, and beautiful days together on Martha's Vineyard.</p>
+      <a class="enter" href="guide.html">View Trip Details</a>
+    </article>
+  </section>
+</main>
+<script>
+document.getElementById('openBtn').addEventListener('click', function(){
+  document.getElementById('opening').classList.add('open');
+});
+</script>
 </body>
 </html>
