@@ -1,23 +1,7 @@
-# Trina's Celebration — V6
+# Trina's Celebration — V7
 
-This version adds the missing planning details from Trina's original 4-page document.
-
-New structure:
-- Getting Here
-- Where to Stay
-- Sample Costs
-- Celebration Plans & Guest Ideas
-- Explore the Island
-- Before You Go
-
-The opening invitation now says Oak Bluffs, Massachusetts.
-
-The plans page intentionally separates:
-- hosted/confirmed celebration plans
-- flexible guest ideas
-
-Future phase:
-- guest sign-up / interested status
-- attendee list
-- meeting time and place
-- guest-created meetup ideas
+Changes:
+- Added colons between labels and values throughout the copied planning details.
+- Removed the "Martha's Vineyard is an island" note from the guide page.
+- Moved that note into the Getting Here / Travel page.
+- Improved spacing between labels and values on cost lists.
