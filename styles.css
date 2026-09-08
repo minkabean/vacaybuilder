@@ -98,3 +98,126 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 @media(prefers-reduced-motion:reduce){
   .art,.reveal{transition:none}
 }
+
+
+/* V2 mobile and interaction fixes */
+.opening {
+  display: grid;
+  place-items: center;
+  background: #d5c6b2;
+}
+
+/* Show the complete approved artwork instead of cropping it on phones. */
+.art {
+  object-fit: contain;
+  object-position: center center;
+  background: #d5c6b2;
+}
+
+/* The generated artwork already contains the visual button outline.
+   Our invisible hit area must not draw another border. */
+.open-control {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Make both the seal and the visible OPEN INVITATION area easy tap targets. */
+.seal-control {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 49.5%;
+  transform: translate(-50%, -50%);
+  width: min(110px, 18vw);
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.seal-control:focus-visible,
+.open-control:focus-visible {
+  outline: 3px solid rgba(255,255,255,.95);
+  outline-offset: 5px;
+}
+
+/* Center every element on the revealed invitation explicitly. */
+.invitation-card {
+  margin: auto;
+  text-align: center;
+}
+.invitation-card .location,
+.invitation-card .date,
+.invitation-card .copy {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.invitation-card .enter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Darker, clearer revealed text. */
+.invitation-card {
+  color: #342d24;
+}
+.invitation-card .copy {
+  color: #51483d;
+}
+.invitation-card .kicker,
+.invitation-card .date {
+  color: #765b3e;
+}
+
+@media (max-width: 600px) {
+  .opening {
+    min-height: 100svh;
+  }
+  .art {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Coordinates match the button and seal in the full square artwork. */
+  .open-control {
+    top: 67.2%;
+    width: 70vw;
+    max-width: 360px;
+    height: 8.5vw;
+    min-height: 48px;
+  }
+  .seal-control {
+    top: 50.1%;
+    width: 18vw;
+    max-width: 92px;
+  }
+
+  .reveal {
+    align-items: center;
+    justify-items: center;
+    padding: 18px;
+  }
+  .invitation-card {
+    width: min(94vw, 620px);
+    padding: 38px 22px;
+  }
+  .invitation-card h1 {
+    font-size: clamp(2.75rem, 13vw, 4rem);
+  }
+  .location {
+    font-size: 1.45rem;
+    line-height: 1.15;
+  }
+  .enter {
+    width: min(100%, 360px);
+  }
+}
+
+.opening.open .seal-control{display:none}
