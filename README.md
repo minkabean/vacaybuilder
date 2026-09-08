@@ -1,12 +1,7 @@
-# Trina's Celebration — Luxury Invitation Prototype
+# Trina's Celebration — Luxury Invitation V4
 
-This version implements the approved luxury invitation visual direction.
-
-Opening flow:
-1. Luxury invitation scene
-2. Tap OPEN INVITATION
-3. Invitation details are revealed
-4. Tap VIEW TRIP DETAILS
-5. Enter the simple guest guide
-
-The trip guide remains intentionally simple while the opening experience is refined.
+Changes in this version:
+- The entire opening invitation artwork is tappable.
+- OPEN INVITATION is overlaid as real, darker, larger text for better readability.
+- The revealed invitation is forced to center on mobile.
+- No separate seal-only or button-only hit target is required; guests can tap anywhere on the invitation.

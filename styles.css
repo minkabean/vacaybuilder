@@ -221,3 +221,95 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 }
 
 .opening.open .seal-control{display:none}
+
+
+/* V4: senior-friendly opening screen */
+
+/* Make the whole opening artwork tappable. */
+.full-open-hitarea {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.full-open-hitarea:focus-visible {
+  outline: 4px solid rgba(255,255,255,.95);
+  outline-offset: -8px;
+}
+
+/* Darker, larger live OPEN INVITATION text for easier reading. */
+.open-label {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 67.2%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  color: #2f2922;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: clamp(.95rem, 3.6vw, 1.22rem);
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(255,255,255,.35);
+}
+
+.opening.open .full-open-hitarea,
+.opening.open .open-label,
+.opening.open .seal-control,
+.opening.open .open-control {
+  display: none;
+}
+
+/* Stronger optical centering for the revealed invitation. */
+.reveal {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 18px !important;
+}
+
+.invitation-card {
+  width: min(680px, calc(100vw - 36px)) !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+}
+
+.invitation-card h1,
+.invitation-card .location,
+.invitation-card .date,
+.invitation-card .copy {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.invitation-card .enter {
+  display: flex !important;
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 600px) {
+  .open-label {
+    top: 67.2%;
+    font-size: clamp(.98rem, 4vw, 1.12rem);
+    letter-spacing: .13em;
+  }
+
+  .invitation-card {
+    width: calc(100vw - 36px) !important;
+    padding: 38px 24px !important;
+  }
+}

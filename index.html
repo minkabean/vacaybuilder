@@ -9,10 +9,9 @@
 <body>
 <main class="opening" id="opening">
   <img class="art" src="invitation-art.png" alt="Elegant ivory invitation envelope for Trina's Martha's Vineyard celebration">
-  <button class="open-control" id="openBtn" aria-label="Open Trina's invitation">Open Invitation</button>
-  <button class="seal-control" id="sealBtn" aria-label="Open Trina's invitation by tapping the seal"></button>
-
-  <section class="reveal" aria-live="polite">
+  <button class="full-open-hitarea" id="fullOpen" aria-label="Open Trina's invitation"></button>
+  <div class="open-label" aria-hidden="true">Open Invitation</div>
+<section class="reveal" aria-live="polite">
     <article class="invitation-card">
       <div class="kicker">You're invited</div>
       <div class="rule"></div>
@@ -30,8 +29,7 @@
 function openInvitation() {
   document.getElementById('opening').classList.add('open');
 }
-document.getElementById('openBtn').addEventListener('click', openInvitation);
-document.getElementById('sealBtn').addEventListener('click', openInvitation);
+document.getElementById('fullOpen').addEventListener('click', openInvitation);
 </script>
 </body>
 </html>
