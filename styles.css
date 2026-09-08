@@ -313,3 +313,27 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
     padding: 38px 24px !important;
   }
 }
+
+
+/* V5: use only the artwork's gold OPEN INVITATION text */
+.open-label { display: none !important; }
+
+/* Entire invitation artwork remains tappable. */
+.full-open-hitarea {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fit the complete portrait artwork cleanly on mobile. */
+.art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  background: #d5c6b2;
+}
