@@ -5,12 +5,84 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Discover Martha's Vineyard | Trina's Celebration</title>
 <link rel="stylesheet" href="styles.css">
+
+<style>
+  :root{
+    --ink:#352f28;
+    --muted:#6e655a;
+    --gold:#9b7950;
+    --gold-light:#d3b78d;
+    --paper:#fffdf9;
+    --cream:#faf7f2;
+    --tan:#eee1ce;
+    --line:#d9ccbb;
+    --deep:#3c342b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif}
+  .container{width:min(1080px,calc(100% - 36px));margin-inline:auto}
+  .site-header{background:rgba(250,247,242,.97);border-bottom:1px solid var(--line)}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0}
+  .brand{color:var(--ink);text-decoration:none;font-family:Georgia,serif;font-size:1.2rem}
+  .nav-links{display:flex;flex-wrap:wrap;gap:14px}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:.87rem}
+  .eyebrow,.section-tag{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .about-hero{padding:66px 0 48px;background:linear-gradient(180deg,#eee1ce 0%,#f6ede1 100%);border-bottom:1px solid var(--line)}
+  .about-hero h1{margin:12px 0 18px;max-width:850px;font-family:Georgia,serif;font-size:clamp(3rem,8vw,5.8rem);font-weight:400;line-height:.95}
+  .mv-deck{max-width:820px;margin:0;color:#554b3f;font-size:clamp(1.08rem,2.4vw,1.28rem);line-height:1.65}
+  .featured-video{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,420px);gap:40px;align-items:center;margin-top:42px;padding:clamp(24px,5vw,44px);background:var(--deep);color:#fff8ee}
+  .featured-video-copy h2{margin:8px 0 16px;font-family:Georgia,serif;font-size:clamp(2rem,4.8vw,3.2rem);font-weight:400;line-height:1.08}
+  .featured-video-copy p{margin:0;color:#e9dfd1;font-size:1.05rem;line-height:1.7}
+  .featured-video .section-tag{color:#e0c69d}
+  .video-frame{position:relative;overflow:hidden;background:#000}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-frame-short{aspect-ratio:9/16;max-height:620px}
+  .video-frame-wide{aspect-ratio:16/9}
+  .mv-sections{display:grid;gap:18px;padding-top:30px;padding-bottom:70px}
+  .mv-feature,.mv-worth,.mv-video-section{max-width:940px;padding:clamp(26px,5vw,44px);background:var(--paper);border:1px solid var(--line)}
+  .mv-feature h2,.mv-worth h2,.mv-video-section h2{margin:6px 0 16px;font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.1rem);font-weight:400;line-height:1.08}
+  .mv-feature p,.mv-worth p,.video-section-intro,.video-card p{color:var(--muted);font-size:1rem;line-height:1.72}
+  .mv-black-history{background:var(--deep)}
+  .mv-black-history .section-tag{color:#d4b68b}
+  .mv-black-history h2{color:#fff8ee}
+  .mv-black-history p{color:#e9dfd1}
+  .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:24px 0;background:var(--line);border:1px solid var(--line)}
+  .people-grid span{padding:16px;background:#fffaf1;font-family:Georgia,serif;font-size:1.1rem}
+  .small-note{font-size:.88rem!important}
+  .mv-worth{background:var(--tan);border-left:5px solid var(--gold)}
+  .mv-video-section{background:#f2e8da}
+  .video-section-intro{max-width:700px;margin-bottom:26px}
+  .secondary-videos{display:grid;grid-template-columns:minmax(240px,360px) minmax(0,1fr);gap:28px;align-items:start}
+  .video-card{background:#fffaf3;border:1px solid var(--line);padding:18px}
+  .video-card h3{margin:16px 0 6px;font-family:Georgia,serif;font-size:1.5rem;font-weight:400}
+  .video-card p{margin:0;font-size:.92rem}
+  .mv-next{max-width:940px;text-align:center;padding:18px 0 0}
+  .enter{display:inline-block;padding:14px 20px;background:var(--deep);color:#fff;text-decoration:none}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.84rem}
+  @media(max-width:800px){
+    .nav{align-items:flex-start}
+    .featured-video{grid-template-columns:1fr}
+    .video-frame-short{width:min(100%,390px);margin-inline:auto}
+    .secondary-videos{grid-template-columns:1fr}
+    .secondary-videos .video-frame-short{width:min(100%,330px)}
+    .people-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:520px){
+    .container{width:min(100% - 28px,1080px)}
+    .about-hero{padding-top:46px}
+    .featured-video{padding:22px}
+    .people-grid{grid-template-columns:1fr}
+    .nav-links{gap:10px}
+  }
+</style>
+
 </head>
 <body>
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="guide.html">Trina's Celebration</a>
     <nav class="nav-links" aria-label="Main navigation">
+      <a href="about-marthas-vineyard.html">About MV</a>
       <a href="getting-here.html">Travel</a>
       <a href="stay.html">Stay</a>
       <a href="budget.html">Costs</a>
@@ -22,11 +94,27 @@
 </header>
 
 <main>
-<section class="mv-intro">
+<section class="mv-intro about-hero">
   <div class="container">
     <div class="eyebrow">Discover the Island</div>
     <h1>Why Martha's Vineyard?</h1>
     <p class="mv-deck">Beautiful beaches and coastal towns are only part of the story. For generations, Martha's Vineyard—especially Oak Bluffs—has held a distinctive place in Black American history, culture, community, and summer tradition.</p>
+
+    <div class="featured-video">
+      <div class="featured-video-copy">
+        <div class="section-tag">Watch First</div>
+        <h2>See why Martha's Vineyard feels different</h2>
+        <p>Start with this short video for a quick feel for the island, then explore the history, people, places, and traditions that make this such a meaningful destination.</p>
+      </div>
+      <div class="video-frame video-frame-short">
+        <iframe
+          src="https://www.youtube.com/embed/kcAawQm7J1Y"
+          title="Featured Martha's Vineyard video"
+          loading="eager"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -96,6 +184,41 @@
     <p>You can spend the morning on a beach that generations of Black families have loved, walk through nationally significant Black history in the afternoon, dress up for dinner, attend a film or cultural event, watch the sun set over the water, and still have completely different experiences waiting the next day.</p>
     <p>For Trina's milestone celebration, that combination matters: <strong>beauty, history, Black culture, relaxation, celebration, and time together.</strong> The trip is not about checking attractions off a list. It is about having enough time on the island to settle in, explore, celebrate Trina, and make memories with people you care about.</p>
   </article>
+
+
+  <section class="mv-video-section">
+    <div class="section-tag">More to Watch</div>
+    <h2>Get a little more of the Vineyard before you go</h2>
+    <p class="video-section-intro">These are the other Martha's Vineyard videos from Trina's original planning notes.</p>
+
+    <div class="secondary-videos">
+      <article class="video-card">
+        <div class="video-frame video-frame-short">
+          <iframe
+            src="https://www.youtube.com/embed/cMOxiafRCbY"
+            title="Martha's Vineyard video from Trina's planning notes"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <h3>Martha's Vineyard Video</h3>
+        <p>One of the short videos Trina saved while planning the trip.</p>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame video-frame-wide">
+          <iframe
+            src="https://www.youtube.com/embed/Da_04oApC88"
+            title="Martha's Vineyard video from Trina's planning notes"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <h3>More Martha's Vineyard</h3>
+        <p>A longer video from Trina's original trip-planning document.</p>
+      </article>
+    </div>
+  </section>
 
   <div class="mv-next">
     <a class="enter" href="getting-here.html">Next: How to Get There</a>
