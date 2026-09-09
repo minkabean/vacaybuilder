@@ -425,3 +425,141 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
     row-gap: 4px;
   }
 }
+
+
+/* V8 — Getting Here page only: important travel note */
+.travel-alert {
+  max-width: 850px;
+  padding: 28px;
+  background: #eee1ce;
+  border: 1px solid rgba(155,121,80,.34);
+  border-left: 5px solid #9b7950;
+}
+.travel-alert-label {
+  margin-bottom: 12px;
+  color: #765632;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.travel-alert h2 {
+  margin: 0 0 12px;
+  color: #342d24;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+.travel-alert p {
+  margin: 0 0 18px;
+  color: #4d4439;
+  font-size: 1rem;
+}
+.travel-steps {
+  display: grid;
+  gap: 12px;
+}
+.travel-steps div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #342d24;
+}
+.travel-steps span {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #9b7950;
+  color: #fffaf1;
+  font-weight: 700;
+}
+.travel-steps strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+
+/* V9 — Discover Martha's Vineyard */
+.discover-card {
+  grid-column: 1 / -1;
+  background: #eee1ce;
+  border-color: rgba(155,121,80,.35);
+}
+.mv-intro {
+  padding: 78px 0 52px;
+  background: #eee1ce;
+  border-bottom: 1px solid var(--line);
+}
+.mv-intro h1 {
+  margin: 14px 0 18px;
+  max-width: 800px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.2rem,8vw,6rem);
+  font-weight: 500;
+  line-height: .92;
+}
+.mv-deck {
+  max-width: 800px;
+  margin: 0;
+  color: #554b3f;
+  font-size: clamp(1.05rem,2.5vw,1.3rem);
+  line-height: 1.65;
+}
+.mv-sections {
+  display: grid;
+  gap: 18px;
+  padding-top: 28px;
+  padding-bottom: 72px;
+}
+.mv-feature, .mv-worth {
+  max-width: 900px;
+  padding: clamp(26px,5vw,44px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.mv-feature h2, .mv-worth h2 {
+  margin: 5px 0 16px;
+  font-family: "Cormorant Garamond",serif;
+  font-size: clamp(2.1rem,5vw,3.2rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+.mv-feature p, .mv-worth p {
+  color: #5c5348;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.mv-black-history {
+  background: #3c342b;
+}
+.mv-black-history .section-tag { color: #d4b68b; }
+.mv-black-history h2 { color: #fff8ee; }
+.mv-black-history p { color: #e9dfd1; }
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  margin: 24px 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.people-grid span {
+  padding: 16px;
+  background: #fffaf1;
+  font-family: "Cormorant Garamond",serif;
+  font-size: 1.2rem;
+}
+.mv-worth {
+  background: #eee1ce;
+  border-left: 5px solid #9b7950;
+}
+.mv-worth strong { color: #342d24; }
+.mv-next { max-width:900px;text-align:center;padding:18px 0 0; }
+@media(max-width:700px) {
+  .people-grid { grid-template-columns: 1fr 1fr; }
+  .discover-card { grid-column:auto; }
+}
