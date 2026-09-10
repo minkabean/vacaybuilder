@@ -366,3 +366,40 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .booking-alert{grid-template-columns:1fr}.booking-alert-date{width:92px;height:92px;font-size:2.1rem}
 .hotel-card-top{align-items:flex-start}.total-card div{display:grid;gap:5px}
 }
+
+/* V15 homepage + targeted lodging fix. V11 typography intentionally preserved. */
+.stay-feature .section-tag{color:#e2c89f!important}
+.stay-feature h2{color:#fff8ee!important}
+.stay-feature p{color:#eadfce!important}
+
+/* Celebration Home */
+.home-shell{width:min(1080px,calc(100% - 36px));margin-inline:auto}
+.home-hero{padding:70px 0 54px}
+.home-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+.home-kicker{color:#9b7950;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.home-hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(3.5rem,8vw,6.7rem);font-weight:500;line-height:.88;margin:12px 0 20px}
+.home-hero .home-lead{font-size:1.14rem;line-height:1.7;color:#6e655a;max-width:690px}
+.home-meta{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}
+.home-meta span{border:1px solid #d9ccbb;padding:10px 13px;background:#fffdf9;font-size:.9rem}
+.home-actions{display:flex;flex-wrap:wrap;gap:10px}
+.home-actions a{display:inline-block;padding:14px 18px;text-decoration:none;font-weight:700}
+.home-primary{background:#3c342b;color:#fff8ee}.home-secondary{border:1px solid #9b7950;color:#5e472d;background:transparent}
+.countdown-card{background:#3c342b;color:#fff8ee;padding:36px;text-align:center}
+.countdown-card small{color:#d9bd93;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+.countdown-number{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(4rem,10vw,7rem);line-height:.9;margin:16px 0 4px}
+.countdown-label{font-size:1.05rem}.countdown-date{margin-top:22px;padding-top:18px;border-top:1px solid #ffffff2c;color:#eadfce}
+.home-section{padding:52px 0;border-top:1px solid #e1d7ca}
+.home-section-head{max-width:760px;margin-bottom:24px}.home-section-head h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(2.3rem,5vw,3.7rem);font-weight:500;line-height:1;margin:7px 0 12px}.home-section-head p{color:#6e655a;line-height:1.65}
+.about-feature{display:grid;grid-template-columns:1fr 1fr;background:#eee1ce}
+.about-feature-copy{padding:clamp(28px,5vw,46px)}.about-feature-copy h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;margin:8px 0 14px}.about-feature-copy p{color:#62584d;line-height:1.65}.about-feature-copy a{display:inline-block;margin-top:12px;color:#5e472d;font-weight:700}
+.about-feature-art{min-height:300px;background:linear-gradient(145deg,#8f765c,#d7c3a7);display:grid;place-items:center;padding:30px;color:#fff;text-align:center}.about-feature-art strong{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.4rem;font-weight:500}.about-feature-art span{display:block;margin-top:8px;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem}
+.plan-preview{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.official-preview,.ideas-preview{padding:30px;border:1px solid #d9ccbb}.official-preview{background:#3c342b;color:#fff8ee}.official-preview .home-kicker{color:#e0c69d}.official-preview h3,.ideas-preview h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;font-weight:500;margin:9px 0 12px}.official-preview p{color:#eadfce;line-height:1.55}.ideas-preview{background:#fffdf9}.ideas-preview p{color:#6e655a;line-height:1.55}.plan-preview a{font-weight:700;color:inherit}
+.trip-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.trip-link{background:#fffdf9;border:1px solid #d9ccbb;padding:24px;text-decoration:none;color:#352f28;min-height:160px}.trip-link small{color:#9b7950;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.trip-link h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.7rem;font-weight:500;margin:14px 0 8px}.trip-link span{color:#6e655a;line-height:1.45;font-size:.93rem}
+.do-preview{display:grid;grid-template-columns:1fr 1fr;gap:16px}.do-card{padding:30px;background:#eee1ce;border:1px solid #d9ccbb}.do-card:nth-child(2){background:#fffdf9}.do-card h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;font-weight:500;margin:8px 0 10px}.do-card p{color:#6e655a;line-height:1.6}.do-card a{color:#5e472d;font-weight:700}
+.updates-box{background:#f4ede3;border-left:5px solid #9b7950;padding:28px}.updates-box h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;font-weight:500;margin:7px 0}.updates-box p{color:#6e655a;line-height:1.6;margin-bottom:0}
+@media(max-width:800px){
+.home-hero-grid,.about-feature,.plan-preview,.do-preview{grid-template-columns:1fr}.trip-links{grid-template-columns:1fr 1fr}.countdown-card{max-width:460px}.home-hero{padding-top:48px}
+}
+@media(max-width:520px){
+.home-shell{width:min(100% - 28px,1080px)}.trip-links{grid-template-columns:1fr}.home-actions a{width:100%;text-align:center}.home-hero h1{font-size:clamp(3.3rem,17vw,4.7rem)}
+}
