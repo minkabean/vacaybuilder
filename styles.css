@@ -18,3 +18,31 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .nav-links a{flex:0 0 auto;min-height:44px;display:inline-flex;align-items:center;padding:0 13px;border:1px solid rgba(155,121,80,.32);background:rgba(255,255,255,.55);border-radius:999px;font-size:.92rem!important;white-space:nowrap;text-decoration:none!important}.nav-links a[aria-current=page]{background:var(--deep);border-color:var(--deep);color:white}
 .page-hero{padding:42px 0 30px!important}.page-hero h1{font-size:clamp(2.7rem,13vw,4.3rem)!important}.lead{font-size:1.05rem!important}.card-grid{grid-template-columns:1fr}.discover-card{grid-column:auto}.card,.info-box{padding:22px}.cost-list div{display:grid;gap:5px}.cost-list strong{text-align:left}.page-next-v12 a{width:100%;text-align:center}
 }
+
+/* V13 — Stay and Savings pages */
+.stay-hero{padding-bottom:30px}
+.stay-feature{max-width:940px;margin:0 auto 54px;padding:clamp(28px,5vw,44px);background:var(--deep);color:#fff8ee;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.stay-feature h2,.stay-section h2,.booking-alert h2,.budget-summary h2,.budget-section h2{font-family:Georgia,serif;font-weight:400}
+.stay-feature h2{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0 12px}.stay-feature p{max-width:670px;color:#eadfce;line-height:1.65}
+.stay-feature-status{min-width:180px;border-left:1px solid #ffffff35;padding-left:24px;display:grid;gap:6px}.stay-feature-status small{color:#cfb68f;text-transform:uppercase;letter-spacing:.12em}.stay-feature-status strong{font-size:1.1rem}
+.stay-section,.budget-section{max-width:940px;margin:0 auto 58px}.stay-section>h2,.budget-section>h2{font-size:clamp(2rem,5vw,3rem);margin:6px 0 10px}.section-copy{max-width:760px;color:var(--muted);line-height:1.65;margin-bottom:24px}
+.hotel-grid,.total-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.hotel-card,.total-card{background:var(--paper);border:1px solid var(--line);padding:24px}
+.hotel-card-top{display:flex;justify-content:space-between;gap:12px;color:var(--gold);font-size:.77rem;text-transform:uppercase;letter-spacing:.08em}.hotel-card-top strong{text-align:right}
+.hotel-card h3,.total-card h3,.free-grid h3{font-family:Georgia,serif;font-weight:400}.hotel-card h3{font-size:2rem;margin:18px 0 5px}.hotel-type{font-weight:700;color:#5e5144!important}.hotel-card p{color:var(--muted);line-height:1.55}
+.hotel-estimate{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:5px}.hotel-estimate small{color:var(--muted)}.hotel-estimate strong{font-size:1.35rem}
+.two-col-info{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}.oak-bluffs-callout{background:var(--tan);border-left:5px solid var(--gold)}
+.booking-alert{max-width:940px;margin:0 auto 58px;padding:28px;background:#efe3d1;border:1px solid #ceb995;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.booking-alert-date{width:112px;height:112px;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--deep);color:white;font-family:Georgia,serif;font-size:2.5rem;line-height:.7}.booking-alert-date span{font-family:Arial,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;margin-top:10px}.booking-alert h2{font-size:clamp(2rem,5vw,2.8rem);margin:6px 0 8px}.booking-alert p{color:var(--muted);line-height:1.6;margin:0}
+.check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.check-grid div{background:var(--paper);padding:20px;display:grid;gap:8px}.check-grid strong{font-family:Georgia,serif;font-size:1.3rem}.check-grid span{color:var(--muted);line-height:1.5}
+.budget-summary{max-width:940px;margin:0 auto 54px;background:var(--deep);color:#fff8ee;padding:clamp(28px,5vw,44px)}.budget-summary h2{font-size:clamp(2rem,5vw,3rem);margin:6px 0 4px}.budget-summary .big-number{font-family:Georgia,serif;font-size:clamp(4rem,11vw,7rem);line-height:1;margin:15px 0}.budget-summary p{max-width:720px;color:#eadfce;line-height:1.6}
+.budget-cost-list{background:var(--paper);border:1px solid var(--line);padding:0 20px}.budget-cost-list div:last-child{border-bottom:0}
+.total-card small{color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:700}.total-card h3{font-size:2.6rem;margin:15px 0 3px}.total-card p{color:var(--muted);margin:0 0 22px}.total-card div{display:flex;justify-content:space-between;gap:15px;padding-top:14px;border-top:1px solid var(--line)}.total-card div span{color:var(--muted)}
+.savings-section{background:var(--tan);padding:clamp(25px,5vw,38px)}.savings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.savings-grid div{background:#fffaf3;border:1px solid var(--line);padding:22px;display:grid;gap:7px}.savings-grid small{color:var(--muted)}.savings-grid strong{font-family:Georgia,serif;font-size:1.8rem;font-weight:400}.savings-grid span{font-weight:700;color:#6b5030}
+.free-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.free-grid article{background:var(--paper);border:1px solid var(--line);padding:22px}.free-grid h3{font-size:1.65rem;margin:0 0 8px}.free-grid p{color:var(--muted);line-height:1.5}.free-grid strong{color:#6f542f;text-transform:uppercase;letter-spacing:.08em}
+.budget-note{max-width:940px;margin:0 auto 34px;padding:20px;background:#eee1ce;border-left:5px solid var(--gold);line-height:1.6}
+@media(max-width:760px){
+.stay-feature{grid-template-columns:1fr}.stay-feature-status{border-left:0;border-top:1px solid #ffffff35;padding:18px 0 0}
+.hotel-grid,.total-grid,.savings-grid,.check-grid,.free-grid,.two-col-info{grid-template-columns:1fr}
+.booking-alert{grid-template-columns:1fr}.booking-alert-date{width:92px;height:92px;font-size:2.1rem}
+.hotel-card-top{align-items:flex-start}.total-card div{display:grid;gap:5px}
+}
