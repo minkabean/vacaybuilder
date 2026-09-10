@@ -1,3 +1,7 @@
+# Trina's Martha's Vineyard Site — V17
+
+Database/auth foundation added. See `DATABASE-SETUP.md`.
+
 # Trina's Celebration — V7
 
 Changes:

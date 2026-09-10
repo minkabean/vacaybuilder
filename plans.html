@@ -9,6 +9,13 @@
     </nav>
   </div>
 </header>
+<div class="auth-strip">
+  <div class="auth-strip-inner">
+    <span class="auth-status" data-auth-status>Browsing as guest</span>
+    <button class="auth-button" type="button" data-sign-in>Sign in with Google</button>
+    <button class="auth-button" type="button" data-sign-out hidden>Sign out</button>
+  </div>
+</div>
 <main class="container">
 <section class="page-hero"><div class="eyebrow">Together on the Vineyard</div><h1>Celebration Plans & Guest Ideas</h1>
 <p class="lead">Official celebration events live at the top. Everything else is inspiration—ideas guests can eventually suggest, join, and turn into meetups.</p></section>
@@ -56,5 +63,51 @@
 <article class="add-idea-v16"><div class="eyebrow">Future Guest Feature</div><h2>Add an idea</h2><p>Guests will be able to recommend a restaurant, beach, tour, class, shopping stop, or activity.</p><button disabled>Add an Idea · Database Phase</button></article>
 <article class="meetup-v16"><div class="eyebrow">Future Meetup Feature</div><h2>Turn an idea into a plan</h2><div class="meetup-example"><strong>Sunset Sail</strong><span>Friday · 5:30 PM</span><span>Meet at Oak Bluffs Harbor</span><b>8 Going · 4 Interested</b></div></article>
 </section>
+
+<section class="dynamic-ideas">
+  <div class="dynamic-ideas-head">
+    <div>
+      <div class="eyebrow">Live Guest Ideas</div>
+      <h2>Ideas from the group</h2>
+    </div>
+  </div>
+
+  <form class="idea-form" data-idea-form>
+    <label>Activity or idea
+      <input name="title" maxlength="120" required placeholder="Example: Sunrise walk at Inkwell Beach">
+    </label>
+    <label>Category
+      <select name="category">
+        <option>Beach & Water</option>
+        <option>Black Culture & History</option>
+        <option>Food & Coffee</option>
+        <option>Shopping</option>
+        <option>Wellness</option>
+        <option>Entertainment</option>
+        <option>Sightseeing</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Suggested date
+      <input type="date" name="suggested_date" min="2029-08-05" max="2029-08-18">
+    </label>
+    <label>Suggested time
+      <input type="time" name="suggested_time">
+    </label>
+    <label class="full">Meeting place
+      <input name="meeting_place" maxlength="160" placeholder="Example: Oak Bluffs Harbor">
+    </label>
+    <label class="full">Details
+      <textarea name="description" maxlength="1000" placeholder="What should people know?"></textarea>
+    </label>
+    <button type="submit" disabled>Add Idea</button>
+    <p class="idea-form-note" data-idea-form-note>Sign in with Google to add an idea.</p>
+  </form>
+
+  <div class="dynamic-card-list" data-idea-list></div>
+</section>
+
 <div class="v16-next"><a href="explore.html">Next: Explore the Island →</a></div>
-</main><footer><div class="container">Trina's 60th Birthday & Retirement Celebration · Martha's Vineyard, Massachusetts · August 5–18, 2029</div></footer></body></html>
+</main><footer><div class="container">Trina's 60th Birthday & Retirement Celebration · Martha's Vineyard, Massachusetts · August 5–18, 2029</div></footer><script type="module" src="js/auth.js"></script>
+<script type="module" src="js/ideas.js"></script>
+</body></html>

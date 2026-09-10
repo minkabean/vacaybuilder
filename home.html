@@ -15,6 +15,13 @@
     </nav>
   </div>
 </header>
+<div class="auth-strip">
+  <div class="auth-strip-inner">
+    <span class="auth-status" data-auth-status>Browsing as guest</span>
+    <button class="auth-button" type="button" data-sign-in>Sign in with Google</button>
+    <button class="auth-button" type="button" data-sign-out hidden>Sign out</button>
+  </div>
+</div>
 
 <main>
 <section class="home-hero">
@@ -143,5 +150,6 @@
   document.getElementById("countdownDays").textContent = days.toLocaleString();
 })();
 </script>
+<script type="module" src="js/auth.js"></script>
 </body>
 </html>

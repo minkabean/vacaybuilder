@@ -9,6 +9,13 @@
     </nav>
   </div>
 </header>
+<div class="auth-strip">
+  <div class="auth-strip-inner">
+    <span class="auth-status" data-auth-status>Browsing as guest</span>
+    <button class="auth-button" type="button" data-sign-in>Sign in with Google</button>
+    <button class="auth-button" type="button" data-sign-out hidden>Sign out</button>
+  </div>
+</div>
 <main class="container">
 <section class="page-hero"><div class="eyebrow">Community</div><h1>Plan together. Remember it together.</h1>
 <p class="lead">This is the part of the site that will become interactive in the database phase. For now, it shows guests what they'll eventually be able to do.</p></section>
@@ -33,6 +40,20 @@
 <article><h3>Trip Memories</h3><p>Attach short captions and stories to special moments so the website becomes a scrapbook instead of disappearing after the event.</p><div class="memory-placeholder"><strong>Favorite moment</strong><span>Story + photo · coming later</span></div></article>
 </div></section>
 
+
+<section class="guestbook-live">
+  <div class="eyebrow">Guest Book</div>
+  <h2 class="v16-title">Leave Trina a message</h2>
+  <form class="guestbook-form" data-guestbook-form>
+    <textarea name="message" maxlength="1500" required placeholder="Write a birthday, retirement, or trip message for Trina."></textarea>
+    <button type="submit" disabled>Add Message</button>
+    <small data-guestbook-note>Sign in with Google to leave a message.</small>
+  </form>
+  <div class="guestbook-list" data-guestbook-list></div>
+</section>
+
 <section class="v16-note"><strong>No account is needed to browse the public trip guide.</strong> Later, Google sign-in will only be used for actions like submitting ideas, joining activities, sharing photos, or leaving messages.</section>
 <div class="v16-next"><a href="home.html">Back to Celebration Home →</a></div>
-</main><footer><div class="container">Trina's 60th Birthday & Retirement Celebration · Martha's Vineyard, Massachusetts · August 5–18, 2029</div></footer></body></html>
+</main><footer><div class="container">Trina's 60th Birthday & Retirement Celebration · Martha's Vineyard, Massachusetts · August 5–18, 2029</div></footer><script type="module" src="js/auth.js"></script>
+<script type="module" src="js/guestbook.js"></script>
+</body></html>
