@@ -1,6 +1,6 @@
-# V17 Database Setup
+# V18 Database Setup
 
-V17 keeps the site static on Cloudflare Pages and adds a PostgreSQL/Auth/Storage backend through Supabase.
+V18 keeps the site static on Cloudflare Pages and adds a PostgreSQL/Auth/Storage backend through Supabase.
 
 ## Why this architecture
 - The public site stays plain HTML/CSS/JavaScript.

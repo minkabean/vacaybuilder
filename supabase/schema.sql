@@ -308,7 +308,7 @@ with check (public.is_event_organizer(event_id));
 insert into public.events (slug,title,subtitle,destination,starts_on,ends_on,is_public)
 values (
   'trina-60-retirement-2029',
-  'Trina''s 60th Birthday & Retirement Celebration',
+  'Trina''s 60th Birthday & Retirement Trip',
   'Two weeks on Martha''s Vineyard to celebrate, relax, explore, and spend time together.',
   'Oak Bluffs · Martha''s Vineyard, Massachusetts',
   '2029-08-05',
@@ -325,16 +325,16 @@ on conflict (slug) do update set
 -- Seed the official birthday event as a draft until date/time are finalized.
 insert into public.celebration_events (event_id,title,description,location,status,sort_order)
 select id,
-       'Trina''s 60th Birthday Celebration',
-       'The main birthday celebration details will be added once finalized.',
-       'Oak Bluffs',
+       'Trina''s Birthday & Retirement Celebration',
+       'Tentatively planned for July 21, 2029, before the Martha''s Vineyard trip.',
+       'Trina''s Home',
        'draft',
        10
 from public.events
 where slug='trina-60-retirement-2029'
 and not exists (
   select 1 from public.celebration_events ce
-  where ce.event_id=events.id and ce.title='Trina''s 60th Birthday Celebration'
+  where ce.event_id=events.id and ce.title='Trina''s Birthday & Retirement Celebration'
 );
 
 -- PHOTO STORAGE
