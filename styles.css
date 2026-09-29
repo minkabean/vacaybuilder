@@ -586,3 +586,13 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
   .dynamic-ideas-head{display:block}
   .dynamic-idea-card-top{display:block}
 }
+
+/* V19 — daily/nightly budget */
+.budget-v19{max-width:940px;margin:0 auto 58px}
+.budget-v19-note{max-width:720px;color:var(--muted);line-height:1.65;margin:0 0 20px}
+.budget-v19-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.budget-v19-grid article{background:#fffaf1;border:1px solid var(--line);padding:20px;display:grid;grid-template-columns:1fr auto;gap:8px 18px;align-items:start}
+.budget-v19-grid article span{line-height:1.4}
+.budget-v19-grid article strong{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:600;white-space:nowrap}
+.budget-v19-grid article small{grid-column:1/-1;color:var(--muted);line-height:1.4}
+@media(max-width:700px){.budget-v19-grid{grid-template-columns:1fr}}
