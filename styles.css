@@ -596,3 +596,41 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .budget-v19-grid article strong{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:600;white-space:nowrap}
 .budget-v19-grid article small{grid-column:1/-1;color:var(--muted);line-height:1.4}
 @media(max-width:700px){.budget-v19-grid{grid-template-columns:1fr}}
+
+
+/* V20 — clean budget page */
+.budget-clean{max-width:940px;margin:0 auto;padding:56px 24px 80px}
+.budget-clean-hero{max-width:760px;margin-bottom:58px}
+.budget-clean-hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(3rem,7vw,5.2rem);font-weight:500;line-height:.98;margin:8px 0 18px}
+.budget-clean-hero p{font-size:1rem;line-height:1.7;color:var(--muted);max-width:650px}
+.budget-clean-section{margin:0 0 58px}
+.budget-clean-section>h2,.budget-section-heading h2{font-family:"Cormorant Garamond",serif;font-size:2.35rem;font-weight:500;margin:5px 0 20px}
+.budget-lines{border-top:1px solid var(--line)}
+.budget-line{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:17px 2px;border-bottom:1px solid var(--line)}
+.budget-line>span{font-size:.98rem}
+.budget-line span small{display:block;margin-top:4px;color:var(--muted);font-size:.75rem}
+.budget-line>strong{font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;white-space:nowrap;text-align:right}
+.budget-line>strong small{font-family:Montserrat,sans-serif;font-size:.67rem;font-weight:400;color:var(--muted)}
+.budget-section-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:18px}
+.budget-section-heading h2{margin-bottom:0}
+.budget-section-heading p{max-width:370px;color:var(--muted);font-size:.82rem;line-height:1.55;margin:0;text-align:right}
+.hotel-price-list,.free-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hotel-price-list article,.free-list article{background:#fffaf1;border:1px solid var(--line);padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:94px}
+.hotel-price-list h3,.free-list h3{font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:600;line-height:1.1;margin:0 0 5px}
+.hotel-price-list p,.free-list p{font-size:.74rem;line-height:1.45;color:var(--muted);margin:0}
+.hotel-price-list article>strong,.free-list article>strong{font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:600;white-space:nowrap;text-align:right}
+.hotel-price-list strong small{font-family:Montserrat,sans-serif;font-size:.63rem;font-weight:400;color:var(--muted)}
+.budget-clean-note{background:#f0e5d5;border:1px solid #d7c2a3;padding:22px 24px;margin:0 0 42px}
+.budget-clean-note strong{font-family:"Cormorant Garamond",serif;font-size:1.35rem}
+.budget-clean-note p{color:var(--muted);line-height:1.6;margin:6px 0 0;font-size:.83rem}
+@media(max-width:700px){
+ .budget-clean{padding:38px 18px 64px}
+ .budget-clean-hero{margin-bottom:42px}
+ .budget-clean-section{margin-bottom:44px}
+ .budget-line{gap:18px;padding:15px 0}
+ .budget-line>strong{font-size:1.35rem}
+ .budget-section-heading{display:block}
+ .budget-section-heading p{text-align:left;margin-top:8px}
+ .hotel-price-list,.free-list{grid-template-columns:1fr}
+ .hotel-price-list article,.free-list article{padding:17px 18px;gap:14px}
+}
