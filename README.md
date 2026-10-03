@@ -59,3 +59,18 @@ Keep the existing GitHub connection on the `vacaybuilder` Worker. In Cloudflare 
 - Going / Interested responses
 - Guest book
 - Shared photos
+
+
+## 2026-10-02 redirect-loop fix
+
+The Worker now passes `/admin`, `/admin.html`, `/member`, and `/member.html`
+directly to the Static Assets binding instead of internally rewriting clean
+URLs to `.html` files.
+
+Cloudflare Static Assets uses `auto-trailing-slash` HTML handling by default:
+a request for `/admin` serves `admin.html`, while `/admin.html` redirects to
+`/admin`. Internally rewriting `/admin` to `/admin.html` therefore created a
+307 loop. This build removes that rewrite.
+
+No Access policy, Google OAuth, OTP, AUD tag, or cookie-setting change is
+required for this specific fix.
