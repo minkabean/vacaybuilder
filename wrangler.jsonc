@@ -35,6 +35,7 @@
     }
   ],
   "vars": {
+    "EVENT_SLUG": "trina-60-2029",
     "TEAM_DOMAIN": "https://dry-surf-9ac8.cloudflareaccess.com",
     "ORGANIZER_AUD": "17cb166408209e6aa62491efcc9a624495d205d70e4952ba9a563857cc7ae6dc",
     "MEMBER_AUD": "17af506663eea74fab3c5539857c2d39d3a0cfdc3de15ec05ececfa36949d736",

@@ -74,3 +74,18 @@ a request for `/admin` serves `admin.html`, while `/admin.html` redirects to
 
 No Access policy, Google OAuth, OTP, AUD tag, or cookie-setting change is
 required for this specific fix.
+
+## 2026-10-03 admin-loading and completion fix
+
+- `/admin.js` and `/member.js` are now served as static assets instead of being
+  mistaken for protected API endpoints. This fixes the permanent “Loading…”
+  screen in both portals.
+- Migration `0003_complete_seed_and_indexes.sql` safely fills missing hotel,
+  cost, and editable page-introduction records without replacing existing edits.
+- Guest participation links now lead to working idea, response, guest-book, and
+  photo tools instead of disabled placeholders.
+- The active event slug is configurable with `EVENT_SLUG`, which keeps the
+  Worker reusable for a future VacayBuilder event.
+
+After deployment, use the clean URLs `/admin` and `/member`. The `.html` URLs
+remain compatible but Cloudflare may canonicalize them to the clean URLs.
