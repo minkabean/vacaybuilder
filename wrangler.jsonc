@@ -1,0 +1,46 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vacaybuilder",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-02",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "trinia.tripinvitation.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*",
+      "/member*",
+      "/admin*"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vacaybuilder",
+      "database_id": "a814face-b3c0-413d-9e79-f53eda1daf57",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "PHOTOS",
+      "bucket_name": "vacaybuilder-photos"
+    }
+  ],
+  "vars": {
+    "TEAM_DOMAIN": "https://dry-surf-9ac8.cloudflareaccess.com",
+    "ORGANIZER_AUD": "17cb166408209e6aa62491efcc9a624495d205d70e4952ba9a563857cc7ae6dc",
+    "MEMBER_AUD": "17af506663eea74fab3c5539857c2d39d3a0cfdc3de15ec05ececfa36949d736",
+    "OWNER_EMAIL": "minkabean@gmail.com",
+    "TRINA_EMAIL": "trinajames2011@yahoo.com"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

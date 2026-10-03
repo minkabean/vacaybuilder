@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>You're Invited | Trina's Trip</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="opening" id="opening">
+  <img class="art" src="invitation-art.png" alt="Elegant ivory invitation envelope for Trina's Martha's Vineyard trip">
+  <button class="full-open-hitarea" id="fullOpen" aria-label="Open Trina's invitation"></button>
+<section class="reveal" aria-live="polite">
+    <article class="invitation-card">
+      <div class="kicker">You're invited</div>
+      <div class="rule"></div>
+      <h1>Trina's
+        <span>60th Birthday &amp;<br>Retirement Trip</span>
+      </h1>
+      <div class="location">Martha's Vineyard · Oak Bluffs, Massachusetts</div>
+      <div class="date">August 5 — 18, 2029</div>
+      <p class="copy">Come celebrate a milestone birthday, retirement, and beautiful days together on Martha's Vineyard.</p>
+      <a class="enter" href="home.html">View Trip Details</a>
+    </article>
+  </section>
+</main>
+<script>
+function openInvitation() {
+  document.getElementById('opening').classList.add('open');
+}
+document.getElementById('fullOpen').addEventListener('click', openInvitation);
+</script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
